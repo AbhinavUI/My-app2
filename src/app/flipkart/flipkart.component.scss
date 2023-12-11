@@ -1,0 +1,57 @@
+*{
+    background-color: white !important;
+}
+h1{
+    padding: 8px;
+    background-color: #2874f0 !important;
+    color: white !important;
+}
+h3{
+    font-family: Roboto,Arial,sans-serif;
+    font-weight: 100;
+}
+h5{
+    font-family: Roboto,Arial,sans-serif;
+    font-weight: 700;
+}
+h6{
+    text-transform: capitalize;
+    color: gray;
+    font-family: Roboto,Arial,sans-serif;
+    font-weight: 100;
+}
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+.items{
+    display: block;
+    height: 300px;
+    width: 200px;
+    border: 10px solid white;
+}
+.top{
+    height: 55%;
+    width: 100%;
+}
+.bottom{
+    height: 45%;
+    width: 100%;
+}
+span{
+    background-color: green !important;
+    border-radius: 4px;
+    color: white;
+    font-size: smaller;
+    padding: 2px;
+}
+samp{
+    color: gray;
+    padding: 2px;
+}
+.checked {
+    font-size: 10px;
+    // margin-right: 2px;
+    color: white;
+  }

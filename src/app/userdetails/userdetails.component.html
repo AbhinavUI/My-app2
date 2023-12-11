@@ -1,0 +1,90 @@
+<!-- <p>userdetails works!</p> -->
+
+<div *ngFor="let userdetail of userdetails">
+    <div>
+        <img src="{{userdetail.image}}" alt="">
+        <h1>Personal Details</h1>
+        <br>
+            <p>ID: {{userdetail.id}}</p>
+            <p>First Name: {{userdetail.firstName}}</p>
+            <p>Last Name: {{userdetail.lastName}}</p>
+            <p>Maiden Name: {{userdetail.maidenName}}</p>
+            <p>Age: {{userdetail.age}}</p>
+            <p>Gender: {{userdetail.gender}}</p>
+            <p>Email: {{userdetail.email}}</p>
+            <p>Phone: {{userdetail.phone}}</p>
+            <p>Username: {{userdetail.username}}</p>
+            <p>Password: {{userdetail.password}}</p>
+            <p>Birth Date: {{userdetail.birthDate}}</p>
+            <p>Blood Group: {{userdetail.bloodGroup}}</p>
+            <p>Height: {{userdetail.height}}</p>
+            <p>Weight: {{userdetail.weight}}</p>
+            <p>Eye Color: {{userdetail.eyeColor}}</p>
+            <div>
+                <h3>Hair</h3>
+                    <p>Eyecolor: {{userdetail.hair.color}}</p>
+                    <p>Type: {{userdetail.hair.type}}</p>
+            </div>
+    </div>
+    <br><br>
+    <div>
+        <h1>Address Details</h1>
+        <br>
+            <p>Domain: {{userdetail.domain}}</p>
+            <p>IP Address: {{userdetail.ip}}</p>
+            <div>
+                <h3>Address</h3>
+                    <p>address: {{userdetail.address.address}}</p>
+                    <p>City: {{userdetail.address.city}}</p>
+                <div>
+                    <h3>Coordinates</h3>
+                        <p>Lattitude: {{userdetail.address.coordinates.lat}}</p>
+                        <p>Longitude: {{userdetail.address.coordinates.lng}}</p>
+                </div>
+            </div>
+            <p>Postal Code: {{userdetail.address.postalCode}}</p>
+            <p>State: {{userdetail.address.state}}</p>
+    </div>
+    <br><br>
+    <div>
+        <h1>Bank Details</h1>
+        <br>
+        <p>Mac Address: {{userdetail.manAddress}}</p>
+        <p>University: {{userdetail.university}}</p>
+        <div>
+            <h3>Bank</h3>
+                <p>Card Expire: {{userdetail.bank.cardExpire}}</p>
+                <p>Card Number: {{userdetail.bank.cardNumber}}</p>
+                <p>Card Type: {{userdetail.bank.cardType}}</p>
+                <p>Currency: {{userdetail.bank.currency}}</p>
+                <p>iban: {{userdetail.bank.iban}}</p>
+        </div>
+    </div>
+    <br><br>
+    <div>
+        <h1>Company Details</h1>
+        <br>
+            <div>
+                <h3>Company Address</h3>
+                    <p>Address: {{userdetail.company.address.address}}</p>
+                    <p>City: {{userdetail.company.address.city}}</p>
+                    <div>
+                        <h3>Coordinates:</h3>
+                            <p>Lattitude: {{userdetail.company.address.coordinates.lat}}</p>
+                            <p>Longitude: {{userdetail.company.address.coordinates.lng}}</p>
+                    </div>
+                    <p>Postal Code: {{userdetail.company.address.postalCode}}</p>
+                    <p>State: {{userdetail.company.address.state}}</p>
+            </div>
+        <p>Department: {{userdetail.company.department}}</p>
+        <p>Department Name: {{userdetail.company.name}}</p>
+        <p>Title: {{userdetail.company.title}}</p>
+        <p>EIN: {{userdetail.ein}}</p>
+        <p>SSN: {{userdetail.ssn}}</p>
+        <p>User Agent: {{userdetail.userAgent}}</p>
+    </div>
+    <hr>
+</div>
+
+
+

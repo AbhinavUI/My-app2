@@ -1,0 +1,46 @@
+<!-- <p>structuraldirectives works!</p> -->
+<!-- <br><br> -->
+<!-- <h1 *ngFor="let name of names">{{name}}</h1> -->
+
+<!-- <select name="" id="">
+    <option *ngFor="let state of states">{{state}}</option>
+</select> -->
+<!-- <br><br> -->
+
+<!-- <h1 *ngFor="let product of products">{{product.name}} and price is {{product.price}}</h1> -->
+
+<label for="">Names:</label>
+<input type="text" [(ngModel)]="name1">
+<br><br>
+<label for="">Prices:</label>
+<input type="number" [(ngModel)]="price1">
+<br><br>
+
+<button (click)="submit()">Submit</button>
+<br><br>
+
+<table>
+    <thead>
+        <tr>
+            <th>Names</th>
+            <th>Prices</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                {{products.name}}
+            </td>
+            <td>
+                {{products.price}}
+            </td>
+        </tr>
+    </tbody>
+</table> 
+
+<!-- <h1 *ngIf="true">Hello</h1>
+<input type="text" [(ngModel)]="num">
+
+<h1 *ngIf="num<0">Negative number</h1>
+<h1 *ngIf="num>0">Positive number</h1>
+<h1 *ngIf="num==0">this number is zero</h1> -->

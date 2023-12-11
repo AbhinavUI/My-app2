@@ -1,0 +1,14 @@
+<!-- <p>photos works!</p> -->
+
+<!-- *ngIf="photos.success==true" -->
+
+
+<div class="main" *ngFor="let photo of photos">
+    <h1>{{photo.name}}</h1>
+    <!-- <h3>{{photo.id}}</h3>
+    <h3>{{photo.box_count}}</h3>
+    <h3>{{photo.captions}}</h3> -->
+    <br>
+    <img src="{{photo.url}}" height="{{photo.height}}" width="{{photo.width}}" alt="">
+</div>
+

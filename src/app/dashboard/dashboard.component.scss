@@ -1,0 +1,67 @@
+.parent{
+    height: 100vh;
+    width: auto;
+    display: flex;
+}
+.left{
+    height: 100%;
+    width: 20%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    overflow: auto;
+}
+.right{
+    // padding: 5px;
+    height: 100%;
+    width: 80%;
+    background-color: gainsboro;
+    overflow: auto;
+}
+h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+}
+h3{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    padding: 10px;
+    height: 20px;
+}
+h3:hover{
+    border-radius: 20px;
+    cursor: pointer;
+    width: auto;
+    background-color: gray;
+    color: white;
+    
+}
+.logout{
+    color: white;
+    background-color: red;
+}
+.option {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    padding: 10px;
+    height: 20px;
+  }
+  
+  .option:hover {
+    border-radius: 20px;
+    cursor: pointer;
+    width: auto;
+    background-color: gray;
+    color: white;
+  }
+  
+  .selected {
+    border-radius: 20px;
+    cursor: pointer;
+    width: auto;
+    background-color: gray;
+    color: white;
+  }

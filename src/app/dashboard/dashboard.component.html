@@ -1,0 +1,39 @@
+<div class="parent">
+    <div class="left">
+        <marquee behavior="scroll" direction="left"><h1>Dashboard</h1></marquee>
+        <br>
+        <hr>
+        <br>
+        <h3 class="option" [class.selected]="selectedOption === 'Option 1'" (click)="selectOption('Option 1')" routerLink="structuraldirectives">Structural Directives</h3>
+        <h3 class="option" [class.selected]="selectedOption === 'Option 2'" (click)="selectOption('Option 2')" routerLink="marks">Marks</h3>
+        <h3 class="option" [class.selected]="selectedOption === 'Option 3'" (click)="selectOption('Option 3')" routerLink="pipes">Pipes</h3>
+        <h3 class="option" [class.selected]="selectedOption === 'Option 4'" (click)="selectOption('Option 4')" routerLink="events">Events</h3>
+        <h3 class="option" [class.selected]="selectedOption === 'Option 5'" (click)="selectOption('Option 5')" routerLink="cars">Cars</h3>
+        <h3 class="option" [class.selected]="selectedOption === 'Option 6'" (click)="selectOption('Option 6')" routerLink="products">Products</h3>
+        <h3 class="option" [class.selected]="selectedOption === 'Option 7'" (click)="selectOption('Option 7')" routerLink="users">Users</h3>
+        <h3 class="option" [class.selected]="selectedOption === 'Option 8'" (click)="selectOption('Option 8')" routerLink="accounts">Accounts</h3>
+        <h3 class="option" [class.selected]="selectedOption === 'Option 9'" (click)="selectOption('Option 9')" routerLink="vehicles">Vehicles</h3>
+        <h3 class="option" [class.selected]="selectedOption === 'Option 10'" (click)="selectOption('Option 10')" routerLink="flipkart">Flipkart Products</h3>
+        <h3 class="option" [class.selected]="selectedOption === 'Option 11'" (click)="selectOption('Option 11')" routerLink="email">Emails</h3>
+        <h3 class="option" [class.selected]="selectedOption === 'Option 12'" (click)="selectOption('Option 12')" routerLink="activity">Activities</h3>
+        <h3 class="option" [class.selected]="selectedOption === 'Option 13'" (click)="selectOption('Option 13')" routerLink="photo">Photos Gallery</h3>
+        <h3 class="option" [class.selected]="selectedOption === 'Option 14'" (click)="selectOption('Option 14')" routerLink="userdetail">User Details</h3>
+        <h3 class="option" [class.selected]="selectedOption === 'Option 15'" (click)="selectOption('Option 15')" routerLink="create-user">Create User</h3>
+        <h3 class="option" [class.selected]="selectedOption === 'Option 16'" (click)="selectOption('Option 16')" routerLink="create-account">Create Account</h3>
+        <h3 class="option" [class.selected]="selectedOption === 'Option 17'" (click)="selectOption('Option 17')" routerLink="create-vehicle">Create Vehicle</h3>
+        <h3 class="option" [class.selected]="selectedOption === 'Option 18'" (click)="selectOption('Option 18')" routerLink="user-form">User Form</h3>
+        <h3 class="option" [class.selected]="selectedOption === 'Option 19'" (click)="selectOption('Option 19')" routerLink="student-form">Student Form</h3>
+        <br>
+
+        <!-- This is ued to navigate back to login page using routerLink method -->
+        <!-- <button routerLink="/login" class="logout">logout</button> -->
+
+        <!-- This is by using a function call in dashboard.ts -->
+        <button (click)="logout()" class="logout">logout</button>
+
+
+    </div>
+    <div class="right">
+        <router-outlet></router-outlet>
+    </div>
+</div>
