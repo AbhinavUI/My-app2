@@ -23,6 +23,7 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { UserFormComponent } from './user-form/user-form.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { AuthenticationGuard } from './authentication.guard';
+import { UserViewComponent } from './user-view/user-view.component';
 
 const routes: Routes = [
   // General routing
@@ -47,7 +48,9 @@ const routes: Routes = [
       {path: 'create-account', component: CreateAccountComponent},
       {path: 'create-vehicle', component: CreateVehicleComponent},
       {path: 'user-form', component: UserFormComponent},
-      {path: 'student-form', component: StudentFormComponent}
+      {path: 'student-form', component: StudentFormComponent},
+      {path: 'user-view/:id', component: UserViewComponent},
+      {path: 'edit-user/:id', component: CreateUserComponent}
   ]},
   // Empty routing
   {path: '',component: LoginComponent},

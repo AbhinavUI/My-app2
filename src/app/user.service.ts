@@ -16,6 +16,10 @@ export class UserService {
     return this._httpClient.get(this.baseUrl);
   }
 
+  getUser(id:number):Observable<any>{
+    return this._httpClient.get(this.baseUrl+"/"+id);
+  }
+
   getFilteredUsers(term:string):Observable<any>{
     return this._httpClient.get(this.baseUrl+"?filter="+term);
   }
@@ -38,5 +42,9 @@ export class UserService {
 
   createUser(data:any):Observable<any>{
     return this._httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/student/",data);
+  }
+
+  editUser(id:number,data:any):Observable<any>{
+    return this._httpClient.put("https://6128991386a213001729f9df.mockapi.io/test/v1/student/"+id,data);
   }
 }
