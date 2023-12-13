@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { UserService } from '../user.service';
 import { AccountService } from '../account.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-account',
@@ -18,20 +19,50 @@ export class CreateAccountComponent {
     profile_picture: new FormControl()
   });
 
-  constructor(private _accountService:AccountService){}
+  public id:any = "";
+
+  constructor(private _activatedRouted: ActivatedRoute, private _accountService: AccountService){
+    _activatedRouted.params.subscribe(
+      (data:any)=>{
+        this.id = data.id;
+        if(this.id){
+          _accountService.getAccount(data.id).subscribe(
+            (data:any)=>{
+              this.accountForm.patchValue(data);
+            },
+            (err:any)=>{
+              alert("Internal server error");
+            }
+          )
+        }
+      }
+    )
+  }
 
   submit(){
     console.log(this.accountForm.value);
 
-    this._accountService.createAccount(this.accountForm.value).subscribe(
-      (data:any)=>{
-        alert("User created successfully");
-      },
-      (err:any)=>{
-        alert("Internal server error");
-      }
-    )
-    
-
+    if(this.id){
+      // to edit
+      this._accountService.editAccount(this.id,this.accountForm.value).subscribe(
+        (data:any)=>{
+          alert("Account updated successfully");
+        },
+        (err:any)=>{
+          alert('Internal server error');
+        }
+      )
+    }
+    else{
+      // to create
+      this._accountService.createAccount(this.accountForm.value).subscribe(
+        (data:any)=>{
+          alert("User created successfully");
+        },
+        (err:any)=>{
+          alert("Internal server error");
+        }
+      )
+    }
   }
 }

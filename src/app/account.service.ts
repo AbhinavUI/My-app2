@@ -15,6 +15,10 @@ export class AccountService {
     return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals");
   }
 
+  getAccount(id:number):Observable<any>{
+    return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id);
+  }
+
   getFilteredAccounts(term:string):Observable<any>{
     return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals?filter="+term);
   }
@@ -33,5 +37,9 @@ export class AccountService {
 
   createAccount(data:any):Observable<any>{
     return this._httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/",data);
+  }
+
+  editAccount(id:number,data:any):Observable<any>{
+    return this._httpClient.put("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id,data);
   }
 }

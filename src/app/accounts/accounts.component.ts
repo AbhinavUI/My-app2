@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AccountService } from '../account.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-accounts',
@@ -22,13 +23,12 @@ export class AccountsComponent {
   public pageno:number = 0;
 
   //"subscribe" to the "Observable" and store the data
-  constructor(private _accountsService:AccountService){
+  constructor(private _accountsService:AccountService, private _router: Router){
+
     _accountsService.getAccounts().subscribe(
-      //This function will apply if browser shows some data 
       (data:any)=>{
         this.accounts = data;
       },
-      //This function will apply if browser shows some error
       (err:any)=>{
         alert('Internal server error');
       }
@@ -78,5 +78,13 @@ export class AccountsComponent {
         alert("Internal Server Error");
       }
     )
+  }
+
+  view(id:number){
+    this._router.navigateByUrl("/dashboard/account-view/"+id);
+  }
+  
+  edit(id:number){
+    this._router.navigateByUrl("dashboard/edit-account/"+id);
   }
 }

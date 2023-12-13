@@ -1,6 +1,6 @@
 <!-- <p>accounts works!</p> -->
 
-<input type="text" placeholder="search here...." (keypress)="getFilteredAccounts()" [(ngModel)]="term">
+<input type="text" placeholder="search here...." (keyup)="getFilteredAccounts()" [(ngModel)]="term">
 <br><br>
 
 <!-- Sorting -->
@@ -58,6 +58,8 @@
                 <img src="{{account.profie_picture}}" alt="">
             </td>
             <td>
+                <button (click)="edit(account.id)">edit</button>
+                <button (click)="view(account.id)">view</button><br>
                 <button (click)="delete(account.id)">delete</button>
             </td>
         </tr>

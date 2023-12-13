@@ -24,6 +24,7 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { UserViewComponent } from './user-view/user-view.component';
+import { AccountViewComponent } from './account-view/account-view.component';
 
 const routes: Routes = [
   // General routing
@@ -50,7 +51,9 @@ const routes: Routes = [
       {path: 'user-form', component: UserFormComponent},
       {path: 'student-form', component: StudentFormComponent},
       {path: 'user-view/:id', component: UserViewComponent},
-      {path: 'edit-user/:id', component: CreateUserComponent}
+      {path: 'edit-user/:id', component: CreateUserComponent},
+      {path: 'account-view/:id', component: AccountViewComponent},
+      {path: 'edit-account/:id', component: CreateAccountComponent}
   ]},
   // Empty routing
   {path: '',component: LoginComponent},

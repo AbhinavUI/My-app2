@@ -1,6 +1,6 @@
 <!-- <p>create-account works!</p> -->
 
-<h1>Create Account Form</h1>
+<h1>{{id ? 'Edit Account Form' : 'Create Account Form'}}</h1>
 <br>
 <form [formGroup]="accountForm">
     <label for="">Account Name</label>
@@ -23,5 +23,5 @@
     <input type="text" formControlName="profile_picture">
     <br><br>
 
-    <button (click)="submit()">submit</button>
+    <button (click)="submit()">{{id ? 'update' : 'create'}}</button>
 </form>
