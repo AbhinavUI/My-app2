@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { VehicleService } from '../vehicle.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-vehicles',
@@ -20,7 +21,8 @@ export class VehiclesComponent {
   // Pagination
   public pageno:number = 0;
 
-  constructor(private _vehiclesService:VehicleService){
+  constructor(private _vehiclesService:VehicleService, private _router: Router){
+
     _vehiclesService.getVehicles().subscribe(
       (data:any)=>{
         this.vehicles = data;
@@ -74,6 +76,14 @@ export class VehiclesComponent {
         alert("Internal Server Error");
       }
     )
+  }
+
+  view(id:number){
+    this._router.navigateByUrl("/dashboard/vehicle-view/"+id);
+  }
+
+  edit(id:number){
+    this._router.navigateByUrl("dashboard/edit-vehicle/"+id);
   }
 
 }

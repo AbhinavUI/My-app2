@@ -1,6 +1,6 @@
 <!-- <p>vehicles works!</p> -->
 
-<input type="text" placeholder="search here...." (keypress)="getFilteredVehicles()" [(ngModel)]="term">
+<input type="text" placeholder="search here...." (keyup)="getFilteredVehicles()" [(ngModel)]="term">
 <br><br>
 
 <!-- Sorting -->
@@ -63,6 +63,8 @@
                 <img src="{{vehicle.image}}" alt="image" height="150px" width="150px">
             </td>
             <td>
+                <button (click)="edit(vehicle.id)">edit</button>
+                <button (click)="view(vehicle.id)">view</button>
                 <button (click)="delete(vehicle.id)">delete</button>
             </td>
         </tr>

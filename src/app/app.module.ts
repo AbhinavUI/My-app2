@@ -29,6 +29,7 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { UserViewComponent } from './user-view/user-view.component';
 import { AccountViewComponent } from './account-view/account-view.component';
+import { VehicleViewComponent } from './vehicle-view/vehicle-view.component';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { AccountViewComponent } from './account-view/account-view.component';
     UserFormComponent,
     StudentFormComponent,
     UserViewComponent,
-    AccountViewComponent
+    AccountViewComponent,
+    VehicleViewComponent
   ],
   imports: [
     BrowserModule,
