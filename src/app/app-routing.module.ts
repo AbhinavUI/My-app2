@@ -26,6 +26,7 @@ import { AuthenticationGuard } from './authentication.guard';
 import { UserViewComponent } from './user-view/user-view.component';
 import { AccountViewComponent } from './account-view/account-view.component';
 import { VehicleViewComponent } from './vehicle-view/vehicle-view.component';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
   // General routing
@@ -56,7 +57,8 @@ const routes: Routes = [
       {path: 'account-view/:id', component: AccountViewComponent},
       {path: 'edit-account/:id', component: CreateAccountComponent},
       {path: 'vehicle-view/:id', component: VehicleViewComponent},
-      {path: 'edit-vehicle/:id', component: CreateVehicleComponent}
+      {path: 'edit-vehicle/:id', component: CreateVehicleComponent},
+      {path: 'parent', component: ParentComponent}
   ]},
   // Empty routing
   {path: '',component: LoginComponent},

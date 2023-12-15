@@ -30,6 +30,8 @@ import { StudentFormComponent } from './student-form/student-form.component';
 import { UserViewComponent } from './user-view/user-view.component';
 import { AccountViewComponent } from './account-view/account-view.component';
 import { VehicleViewComponent } from './vehicle-view/vehicle-view.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 
 @NgModule({
@@ -59,7 +61,9 @@ import { VehicleViewComponent } from './vehicle-view/vehicle-view.component';
     StudentFormComponent,
     UserViewComponent,
     AccountViewComponent,
-    VehicleViewComponent
+    VehicleViewComponent,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,
