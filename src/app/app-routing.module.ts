@@ -27,6 +27,9 @@ import { UserViewComponent } from './user-view/user-view.component';
 import { AccountViewComponent } from './account-view/account-view.component';
 import { VehicleViewComponent } from './vehicle-view/vehicle-view.component';
 import { ParentComponent } from './parent/parent.component';
+import { ItemsComponent } from './items/items.component';
+import { CartComponent } from './cart/cart.component';
+import { NavComponent } from './nav/nav.component';
 
 const routes: Routes = [
   // General routing
@@ -58,7 +61,10 @@ const routes: Routes = [
       {path: 'edit-account/:id', component: CreateAccountComponent},
       {path: 'vehicle-view/:id', component: VehicleViewComponent},
       {path: 'edit-vehicle/:id', component: CreateVehicleComponent},
-      {path: 'parent', component: ParentComponent}
+      {path: 'parent', component: ParentComponent},
+      {path: 'items', component: ItemsComponent},
+      {path: 'cart', component: CartComponent},
+      {path: 'nav', component: NavComponent}
   ]},
   // Empty routing
   {path: '',component: LoginComponent},

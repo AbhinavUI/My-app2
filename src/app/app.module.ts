@@ -32,6 +32,10 @@ import { AccountViewComponent } from './account-view/account-view.component';
 import { VehicleViewComponent } from './vehicle-view/vehicle-view.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { ItemsComponent } from './items/items.component';
+import { CartComponent } from './cart/cart.component';
+import { NavComponent } from './nav/nav.component';
+import { RatingComponent } from './rating/rating.component';
 
 
 @NgModule({
@@ -64,6 +68,10 @@ import { ChildComponent } from './child/child.component';
     VehicleViewComponent,
     ParentComponent,
     ChildComponent,
+    ItemsComponent,
+    CartComponent,
+    NavComponent,
+    RatingComponent,
   ],
   imports: [
     BrowserModule,
