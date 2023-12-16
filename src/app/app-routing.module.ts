@@ -68,8 +68,11 @@ const routes: Routes = [
       {path: 'cart', component: CartComponent},
       {path: 'nav', component: NavComponent},
       {path: 'rating', component: RatingParentComponent},
-      {path: 'about-company', component: AboutCompanyComponent}
-  ]},
+      {path: 'about-company', component: AboutCompanyComponent},
+      {path: 'payments',
+        loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
+      },
+    ]},
   // Empty routing
   {path: '',component: LoginComponent},
   // Wildcard routing
