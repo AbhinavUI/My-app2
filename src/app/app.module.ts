@@ -35,7 +35,9 @@ import { ChildComponent } from './child/child.component';
 import { ItemsComponent } from './items/items.component';
 import { CartComponent } from './cart/cart.component';
 import { NavComponent } from './nav/nav.component';
-import { RatingComponent } from './rating/rating.component';
+import { RatingParentComponent } from './rating-parent/rating-parent.component';
+import { RatingChildComponent } from './rating-child/rating-child.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -71,14 +73,16 @@ import { RatingComponent } from './rating/rating.component';
     ItemsComponent,
     CartComponent,
     NavComponent,
-    RatingComponent,
+    RatingParentComponent,
+    RatingChildComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

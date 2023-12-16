@@ -1,0 +1,20 @@
+<!-- <p>rating-child works!</p> -->
+
+<!-- <h3>Image: {{rate1}}</h3> -->
+
+<div *ngIf="rate1=='1'"><img src="../../assets/image1.jpg" alt="img 1"></div>
+<div *ngIf="rate1=='2'"><img src="../../assets/image2.jpg" alt="img 2"></div>
+<div *ngIf="rate1=='3'"><img src="../../assets/image3.jpg" alt="img 3"></div>
+<div *ngIf="rate1=='4'"><img src="../../assets/image4.jpg" alt="img 4"></div>
+<div *ngIf="rate1=='5'"><img src="../../assets/image5.jpg" alt="img 5"></div>
+
+<br><br>
+<div class="textarea">
+    <textarea cols="30" rows="10" maxlength="{{maxlength}}" (input)="updatedcharcount()" [(ngModel)]="text"></textarea>
+    <div class="charcount">{{charcount}}/{{maxlength}}</div>
+</div>
+<br><br>
+
+<label for="">Max Length:</label>
+<input type="number" [(ngModel)]="maxlength">
+

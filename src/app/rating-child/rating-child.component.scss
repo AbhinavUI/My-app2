@@ -1,0 +1,15 @@
+.textarea{
+    display: inline;
+    position: relative;
+}
+.charcount{
+    position: absolute;
+    color: #666;
+    bottom: 8px;
+    right: 16px;
+    font-size: 18px;
+}
+label{
+    display: inline-block;
+    width: 100px;
+}

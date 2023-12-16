@@ -7,7 +7,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class ChildComponent {
 
+  // parent to child
  @Input() public ac:string = "";
+
+//  child to parent
  public bc:string = "";
  @Output() public bEvent: EventEmitter<any> = new EventEmitter();
 

@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent {
 
+  // parent to child
   public ap:string = "";
+  // child to parent
   public bp:string = "";
 
   catch(value:any){

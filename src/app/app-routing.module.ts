@@ -30,6 +30,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ItemsComponent } from './items/items.component';
 import { CartComponent } from './cart/cart.component';
 import { NavComponent } from './nav/nav.component';
+import { RatingParentComponent } from './rating-parent/rating-parent.component';
 
 const routes: Routes = [
   // General routing
@@ -64,7 +65,8 @@ const routes: Routes = [
       {path: 'parent', component: ParentComponent},
       {path: 'items', component: ItemsComponent},
       {path: 'cart', component: CartComponent},
-      {path: 'nav', component: NavComponent}
+      {path: 'nav', component: NavComponent},
+      {path: 'rating', component: RatingParentComponent}
   ]},
   // Empty routing
   {path: '',component: LoginComponent},
