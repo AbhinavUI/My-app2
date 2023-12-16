@@ -38,6 +38,7 @@ import { NavComponent } from './nav/nav.component';
 import { RatingParentComponent } from './rating-parent/rating-parent.component';
 import { RatingChildComponent } from './rating-child/rating-child.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AboutModule } from './about/about.module';
 
 
 @NgModule({
@@ -83,6 +84,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    AboutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

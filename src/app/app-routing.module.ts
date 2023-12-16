@@ -31,6 +31,7 @@ import { ItemsComponent } from './items/items.component';
 import { CartComponent } from './cart/cart.component';
 import { NavComponent } from './nav/nav.component';
 import { RatingParentComponent } from './rating-parent/rating-parent.component';
+import { AboutCompanyComponent } from './about/about-company/about-company.component';
 
 const routes: Routes = [
   // General routing
@@ -66,7 +67,8 @@ const routes: Routes = [
       {path: 'items', component: ItemsComponent},
       {path: 'cart', component: CartComponent},
       {path: 'nav', component: NavComponent},
-      {path: 'rating', component: RatingParentComponent}
+      {path: 'rating', component: RatingParentComponent},
+      {path: 'about-company', component: AboutCompanyComponent}
   ]},
   // Empty routing
   {path: '',component: LoginComponent},
