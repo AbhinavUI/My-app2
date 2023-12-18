@@ -84,7 +84,7 @@ import { AboutModule } from './about/about.module';
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    AboutModule
+    AboutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

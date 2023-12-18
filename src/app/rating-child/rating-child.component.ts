@@ -14,7 +14,13 @@ export class RatingChildComponent {
  maxlength:number = 0;
 
  updatedcharcount(){
-  this.charcount = this.text.length;
+  if(this.text.length==this.maxlength){
+    alert("Maxlength reached");
+  }
+  else{
+    this.charcount = this.text.length;
+  }
+  
  }
 
 }
